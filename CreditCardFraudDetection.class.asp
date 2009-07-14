@@ -23,8 +23,8 @@
 
 	'Global Configuration Varliables
 	dim ccfdServerList, ccfdAPIVersion, ccfdURL, ccfdSecure, ccfdDebug, ccfdLicenseKey
-	ccfdServerList	= "minfraud1.maxmind.com,minfraud2.maxmind.com"
-	ccfdAPIVersion	= "ASP/1.2.2" 'Version of the API
+	ccfdServerList	= "minfraud3.maxmind.com,minfraud1.maxmind.com"
+	ccfdAPIVersion	= "ASP/1.2.3" 'Version of the API
 	ccfdURL			= "app/ccv2r" 'URL of the webservice
 	ccfdSecure		= 1 'Use HTTPS By Default
 	ccfdTimeout		= 5 'Set default connection timeout to 5 seconds.
@@ -70,6 +70,21 @@
 			tempDictionary.Add "binPhone", 1
 			tempDictionary.Add "custPhone", 1
 			tempDictionary.Add "license_key", 1
+                        tempDictionary.Add "requested_type", 1
+                        tempDictionary.Add "forwardedIP", 1
+                        tempDictionary.Add "emailMD5", 1
+                        tempDictionary.Add "usernameMD5", 1
+                        tempDictionary.Add "passwordMD5", 1
+                        tempDictionary.Add "shipAddr", 1
+                        tempDictionary.Add "shipCity", 1
+                        tempDictionary.Add "shipRegion", 1
+                        tempDictionary.Add "shipPostal", 1
+                        tempDictionary.Add "shipCountry", 1
+                        tempDictionary.Add "txnID", 1
+                        tempDictionary.Add "sessionID", 1
+                        tempDictionary.Add "user_agent", 1
+                        tempDictionary.Add "accept_language", 1
+
 
 			num_allowed_fields = tempDictionary.Count
 			set allowed_fields = tempDictionary
