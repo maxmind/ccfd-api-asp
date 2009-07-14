@@ -1,0 +1,23 @@
+Revision history for MaxMind CreditCardFraudDetection ASP
+
+1.2.2 ASP January 10th 2008
+	- Updated code to use new minfraud1.maxmind.com server
+
+1.2.1 ASP August 15 2004
+	- Converted PHP code to ASP using Msxml2.ServerXMLHTTP in place of Curl and Dictionary Objects in place of Hashed Arrays.
+	- Added in better error handling, script will not die on connection/invalid data failures, instead it will add an item
+	  into the output dictionary object named "err" with a description of the error.
+
+1.2 PHP June 26th 2004
+	- Added binName, binPhone, custPhone to list of input fields
+
+1.1 PHP June 8th 2004
+	- Replaced h1 and h2 servers with www and www2 (all ending with maxmind.com)
+	- Fixed URL encoding bug
+	- Fixed curl code
+	- Added debug and timeout options
+	- Failover if score field not set
+
+1.0 PHP May 5st 2004
+	- original version
+

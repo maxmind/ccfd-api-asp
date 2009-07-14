@@ -1,0 +1,80 @@
+Maxmind Credit Card Fraud Detection Service ASP API Version 1.2.1
+
+=======
+Example
+
+See Example.asp for complete example how to use this API.
+This script can be run from the shell.
+
+=================
+API Documentation
+
+set ccfs = new CreditCardFraudDetection
+  This creates a new CreditCardFraudDetection object
+  Note: "Set" is required since it is an object
+
+ccfs.isSecure
+  If isSecure is set to 0 then it uses regular HTTP.
+  If isSecure is set to 1 then it uses Secure HTTPS.
+
+ccfs.input(dictionary)
+  Takes a dictionary object and uses it as input for the server.
+  See http://www.maxmind.com/app/ccv for details on input fields.
+
+ccfs.query()
+  Queries the server with the fields passed to the input method
+  and stores the output.
+
+set dictionary = ccfs.output()
+  Returns the output from the server as a dictionary object.
+  Note: "Set" is required since it is an object
+  See http://www.maxmind.com/app/ccv for details on output fields.
+  See http://msdn.microsoft.com/library/default.asp?url=/library/en-us/script56/html/jsobjdictionary.asp for details on Dictionary Objects
+
+============
+Secure HTTPS
+
+This script uses Microsoft's Msxml2.ServerXMLHTTP which has full support for
+https.  Most windows server should have it installed, but if for some reason your server
+does not, then you will need to download and install the Microsoft XML Parser, the current
+version at the time of this writing is 3.0 SP4.
+
+http://msdn.microsoft.com/XML/XMLDownloads/default.aspx
+
+Secure HTTPS is on by default.
+If you do not wish to use Secure connections
+then you can turn off Secure HTTPS by setting:
+
+ccfs.isSecure = 0
+
+where ccfs is the CreditCardFraudDetection object.
+
+==============
+Error Handling
+
+The original PHP API really didn't handle errors very well, it just printed out the error and then halted the script, this would create all kinds
+of problems in a production application, to resolve this issue I've added in some addtional code which will place any error messages into a string
+value in the output dictionary object which can then be checked before processing the returned data.
+
+Example:
+	Dim ret
+	Set ret = ccfs.output()
+	if(ret.Item("err") <> "") then
+		'handle error here
+	else
+		'Process data
+	end if
+
+
+A quick way to test the error handler is to modify the hostlist (Unable to find host), webservice url (404 file not found or Invalid data returned),
+or set the timeout (Connection timed out) to a very low value (i.e. 0.01 seconds).
+
+===============================
+Copyright (c) 2004, Raging Creations Ltd. (http://www.ragingcreations.com/)
+Original PHP Code Copyright (c) 2004, MaxMind LLC
+
+Converted by: Shaun Hawkes (shawkes@ragingcreations.com)
+Date: August 15, 2004
+
+All rights reserved.  This package is licensed under the GPL.  For details see
+the COPYING file.
