@@ -1,6 +1,6 @@
 Revision history for MaxMind CreditCardFraudDetection ASP
 
-1.2.3 ASP 
+1.2.3 ASP July 24th
         - Add new fields requested_type, forwardedIP, emailMD5, usernameMD5, passwordMD5, shipAddr,
             shipCity, shipRegion, shipPosta,l shipCountry, txnID, sessionID, user_agent,
             accept_language. ( Boris Zentner )
