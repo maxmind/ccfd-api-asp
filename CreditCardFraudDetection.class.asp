@@ -23,8 +23,8 @@
 
 	'Global Configuration Varliables
 	dim ccfdServerList, ccfdAPIVersion, ccfdURL, ccfdSecure, ccfdDebug, ccfdLicenseKey
-	ccfdServerList	= "minfraud3.maxmind.com,minfraud1.maxmind.com"
-	ccfdAPIVersion	= "ASP/1.2.3" 'Version of the API
+	ccfdServerList	= "minfraud3.maxmind.com,minfraud1.maxmind.com,minfraud2.maxmind.com"
+	ccfdAPIVersion	= "ASP/1.2.4" 'Version of the API
 	ccfdURL			= "app/ccv2r" 'URL of the webservice
 	ccfdSecure		= 1 'Use HTTPS By Default
 	ccfdTimeout		= 5 'Set default connection timeout to 5 seconds.
