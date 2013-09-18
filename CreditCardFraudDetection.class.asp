@@ -24,7 +24,7 @@
 	'Global Configuration Varliables
 	dim ccfdServerList, ccfdAPIVersion, ccfdURL, ccfdSecure, ccfdDebug, ccfdLicenseKey
 	ccfdServerList	= "minfraud3.maxmind.com,minfraud1.maxmind.com,minfraud2.maxmind.com"
-	ccfdAPIVersion	= "ASP/1.2.4" 'Version of the API
+	ccfdAPIVersion	= "ASP/1.2.5" 'Version of the API
 	ccfdURL			= "app/ccv2r" 'URL of the webservice
 	ccfdSecure		= 1 'Use HTTPS By Default
 	ccfdTimeout		= 5 'Set default connection timeout to 5 seconds.
@@ -296,10 +296,10 @@
 				next
 			end if
 
-			'check if outputstr has the score if outputstr does not have 
-			'the score return 0
-			if(outputstr.Exists("score")) then
-				if(outputstr.Item("score") <> "" and outputstr.Item("score") <> "0.00") then
+			'check if outputstr has the countryMatch if outputstr does not have 
+			'the countryMatch return 0
+			if(outputstr.Exists("countryMatch")) then
+				if(outputstr.Item("countryMatch") <> "") then
 					ret = 1
 				end if					
 			end if

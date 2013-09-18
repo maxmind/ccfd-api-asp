@@ -1,4 +1,7 @@
 Revision history for MaxMind CreditCardFraudDetection ASP
+1.2.5 ASP Mar 13th 2012
+        - Check countryMatch instead of score. Score is only avail for
+          minfraud_version <= 1.2 ( Boris Zentner )
 
 1.2.4 ASP Jan 16th 2011
         - Add minfraud2 back to the server list ( Boris Zentner )
