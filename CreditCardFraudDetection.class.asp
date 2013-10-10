@@ -23,7 +23,8 @@
 
     'Global Configuration Varliables
     dim ccfdServerList, ccfdAPIVersion, ccfdURL, ccfdSecure, ccfdDebug, ccfdLicenseKey
-    ccfdServerList    = "minfraud3.maxmind.com,minfraud1.maxmind.com,minfraud2.maxmind.com"
+    ccfdServerList    = "minfraud.maxmind.com,minfraud-us-east.maxmind.com,
+minfraud-us-west.maxmind.com"
     ccfdAPIVersion    = "ASP/1.2.5" 'Version of the API
     ccfdURL            = "app/ccv2r" 'URL of the webservice
     ccfdSecure        = 1 'Use HTTPS By Default
