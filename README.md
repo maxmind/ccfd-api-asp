@@ -1,11 +1,11 @@
-= MaxMind minFraud ASP API
+# MaxMind minFraud ASP API
 
-== Example
+## Example
 
 See `Example.asp` for complete example how to use this API. This script can be
 run from the shell or from IIS.
 
-== API Documentation
+## API Documentation
 
 ```
 set ccfs = new CreditCardFraudDetection
@@ -43,7 +43,7 @@ Returns the output from the server as a dictionary object. `set` is required
 since it is an object. See http://dev.maxmind.com/minfraud for details on
 output fields.
 
-== Secure HTTPS
+## Secure HTTPS
 
 This script uses Microsoft's `Msxml2.ServerXMLHTTP` which has full support for
 SSL. SSL is enabled by default. You may disable it by setting:
@@ -54,7 +54,7 @@ ccfs.isSecure = 0
 
 where `ccfs` is the `CreditCardFraudDetection` object.
 
-== Error Handling
+## Error Handling
 
 Errors will be placed into a string value in the output dictionary object
 which can then be checked before processing the returned data.
