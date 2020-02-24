@@ -1,5 +1,9 @@
 # MaxMind minFraud ASP API
 
+## Deprecation Notice
+
+This API is deprecated and no longer supported.
+
 ## Example
 
 See `Example.asp` for complete example how to use this API. This script can be
